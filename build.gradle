@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+    id 'com.github.johnrengelman.shadow' version '7.0.0'
+}
+
+apply from: "https://cdn.piggypiglet.me/gradle/spigot.gradle"
+
+group 'me.piggypiglet'
+version '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    paper "1.17.1-R0.1"
+
+    implementation "com.google.inject:guice:5.0.1"
+
+    compileOnly "org.jetbrains:annotations:21.0.1"
+}
+
+test {
+    useJUnitPlatform()
+}
